@@ -202,7 +202,7 @@ export const useChatStore = createPersistStore(
 
       newSession(mask?: Mask) {
         const session = createEmptySession();
-
+        session.topic = DEFAULT_TOPIC;
         if (mask) {
           const config = useAppConfig.getState();
           const globalModelConfig = config.modelConfig;
